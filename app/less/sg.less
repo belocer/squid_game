@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+
+.sg__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  position: relative;
+  z-index: 10;
+  transform-style: preserve-3d;
+  transform: perspective(1200px);
+  overflow: hidden;
+}
+
+.run-text__wrap {
+  transform: rotate(-45deg);
+  line-height: 130px;
+  transition: all 1s;
+  position: absolute;
+  z-index: 30;
+
+
+  .run-text {
+    font-size: 80px;
+    color: #7f7f7f;
+    white-space: nowrap;
+    font-weight: 500;
+    transform: translateX(0);
+    transition: transform 6s;
+    pointer-events: none;
+  }
+}
+
+.run-text__wrap-dark {
+  transform: rotate(-45deg) translate(-7px, -5px) ;
+  line-height: 130px;
+  transition: all 1s;
+  position: absolute;
+  z-index: 20;
+
+  .run-text-dark {
+    font-size: 84px;
+    color: #131313;
+    white-space: nowrap;
+    font-weight: 500;
+    transform: translateX(0);
+    transition: transform 6s;
+    pointer-events: none;
+    opacity: .3;
+  }
+}
+
+.wrap_persons,
+.bg_element {
+  position: relative;
+  z-index: 40;
+}
