@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
         arr_obj[i][0].style.opacity = '1'
         arr_obj[i][1].style.opacity = '1'
         i === 2 ? i = 0 : i++;
-    }, 3000);
+    }, 9000);
 
     let obj = {
         run_text__wrap: '.sg__container',
@@ -56,21 +56,33 @@ window.addEventListener('load', () => {
     setInterval(() => {
         arr_dom_element.forEach(item => {
             j = getRandomInt(3)
-            item.style.background = `url(img/dest/${arr_img_figure[j]}.webp) center center no-repeat no-repeat`;
+            item.style.background = `url(./img/dest/${arr_img_figure[j]}.webp) center center no-repeat no-repeat`;
             item.style.backgroundSize = `contain`;
         })
-    },2000);
+    },3000);
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
+
+    /* Раздвигаем двери */
+    let top_door = document.querySelector('.top_door');
+    let bottom_door = document.querySelector('.bottom_door');
+    top_door.style.transform = 'translateY(-100%)';
+    bottom_door.style.transform = 'translateY(100%)';
+
+    setInterval(() => {
+        top_door.style.transform = 'translateY(0)';
+        bottom_door.style.transform = 'translateY(0)';
+    }, 26250);
+    setInterval(() => window.location.reload(), 29000);
 });
 
 /** Верхнее видео **/
 
 let header__video =  document.getElementById('header__video')
 header__video.addEventListener('canplay', () => {
-    setTimeout(() =>header__video.play(), 23000);
+    setTimeout(() =>header__video.play(), 22500);
 });
 
 /* ВСё заканчивается через 28 сек */

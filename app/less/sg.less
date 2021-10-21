@@ -37,10 +37,10 @@
 
   #footer__video {
     position: absolute;
-    bottom: -85px;
+    bottom: -37px;
     left: calc(50% - 250px);
     object-fit: cover;
-    z-index: 23;
+    z-index: 24;
     pointer-events: none;
     mix-blend-mode: screen;
     overflow: hidden;
@@ -50,15 +50,15 @@
   #bottom__video {
     position: absolute;
     bottom: -85px;
-    left: calc(50% - 250px);
+    left: calc(50% - 350px);
     object-fit: cover;
-    z-index: 22;
+    z-index: 23;
     pointer-events: none;
     mix-blend-mode: screen;
     overflow: hidden;
     min-width: 100px;
-    max-height: 750px;
-    transform: translateX(-500px);
+    max-height: 550px;
+    max-width: 750px;
   }
 }
 
@@ -250,8 +250,53 @@
     transform: rotate(217deg);
   }
 }
+.top_door {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background: url("../img/dest/up_door.webp") center center no-repeat no-repeat;
+  background-size: cover;
+  //animation: ease-in-out open_close 9s infinite;
+  transition: transform 3s;
+  transform: translateY(0);
+}
+
+.bottom_door {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background: url("../img/dest/down_door.webp") center center no-repeat no-repeat;
+  background-size: cover;
+  transition: transform 3s;
+  transform: translateY(0);
+}
+
+@keyframes open_close {
+  0% {
+
+  }
+
+  50% {
+
+  }
+
+  100% {
+
+  }
+}
 
 .wrap_persons {
+  margin-top: 100px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -326,39 +371,39 @@
 .wrap_figures_person {
 
   .mask_person1 {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     position: absolute;
     top: 60px;
     left: 135px;
     background: url("../img/dest/circle_white.webp") center center no-repeat no-repeat;
     background-size: contain;
     opacity: .75;
-    animation: ease-in-out mask_person1A 6s infinite;
+    animation: ease-in-out mask_person1A 9s infinite;
   }
 
   .mask_person2 {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     position: absolute;
     top: 21px;
     left: 242px;
     background: url("../img/dest/rectangle_white.webp") center center no-repeat no-repeat;
     background-size: contain;
     opacity: .75;
-    animation: ease-in-out mask_person2A 6s infinite;
+    animation: ease-in-out mask_person2A 9s infinite;
   }
 
   .mask_person3 {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     position: absolute;
     top: 58px;
     left: 360px;
     background: url("../img/dest/triangle_white.webp") center center no-repeat no-repeat;
     background-size: contain;
     opacity: .75;
-    animation: ease-in-out mask_person3A 6s infinite;
+    animation: ease-in-out mask_person3A 9s infinite;
   }
 }
 
