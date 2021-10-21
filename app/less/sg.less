@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 11;
+    z-index: 22;
     pointer-events: none;
     mix-blend-mode: screen;
   }
@@ -40,11 +40,25 @@
     bottom: -85px;
     left: calc(50% - 250px);
     object-fit: cover;
+    z-index: 23;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    overflow: hidden;
+    min-width: 100px;
+  }
+
+  #bottom__video {
+    position: absolute;
+    bottom: -85px;
+    left: calc(50% - 250px);
+    object-fit: cover;
     z-index: 22;
     pointer-events: none;
     mix-blend-mode: screen;
     overflow: hidden;
     min-width: 100px;
+    max-height: 750px;
+    transform: translateX(-500px);
   }
 }
 
@@ -79,7 +93,7 @@
     //font-family: 'Kirang Haerang', cursive;
     opacity: 0;
     //transform: translateY(-50px);
-    animation: linear opacityText 5s forwards;
+    animation: linear opacityText 7s forwards;
     animation-delay: 23s;
   }
 
@@ -106,25 +120,25 @@
     //font-size: 1px;
   }
   20% {
-    opacity: 0;
+    opacity: .2;
     //transform: translateY(-50px);
     color: #f100e5;
     //font-size: 1px;
   }
   40% {
-    opacity: 1;
+    opacity: .4;
     //transform: translateY(0);
     color: #e80000;
     // font-size: 170px;
   }
   60% {
-    opacity: 0;
+    opacity: .6;
     //transform: translateY(-50px);
     color: #f100e5;
     //font-size: 1px;
   }
   80% {
-    opacity: 1;
+    opacity: .8;
     //transform: translateY(0);
     color: #e80000;
     // font-size: 170px;
@@ -310,20 +324,113 @@
 }
 
 .wrap_figures_person {
-  .mask_person1 {
 
+  .mask_person1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 60px;
+    left: 135px;
+    background: url("../img/dest/circle_white.webp") center center no-repeat no-repeat;
+    background-size: contain;
+    opacity: .75;
+    animation: ease-in-out mask_person1A 6s infinite;
   }
 
   .mask_person2 {
-
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 21px;
+    left: 242px;
+    background: url("../img/dest/rectangle_white.webp") center center no-repeat no-repeat;
+    background-size: contain;
+    opacity: .75;
+    animation: ease-in-out mask_person2A 6s infinite;
   }
 
   .mask_person3 {
-
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 58px;
+    left: 360px;
+    background: url("../img/dest/triangle_white.webp") center center no-repeat no-repeat;
+    background-size: contain;
+    opacity: .75;
+    animation: ease-in-out mask_person3A 6s infinite;
   }
 }
 
+@keyframes mask_person1A {
+  0% {
+    top: 60px;
+    left: 135px;
+  }
+
+  33% {
+    top: 21px;
+    left: 242px;
+  }
+
+  66% {
+    top: 58px;
+    left: 360px;
+  }
+
+  100% {
+    top: 60px;
+    left: 135px;
+  }
+}
+
+@keyframes mask_person2A {
+  0% {
+    top: 21px;
+    left: 242px;
+  }
+
+  33% {
+    top: 58px;
+    left: 360px;
+  }
+
+  66% {
+    top: 60px;
+    left: 135px;
+  }
+
+  100% {
+    top: 21px;
+    left: 242px;
+  }
+}
+
+@keyframes mask_person3A {
+  0% {
+    top: 58px;
+    left: 360px;
+  }
+
+  33% {
+    top: 60px;
+    left: 135px;
+  }
+
+  66% {
+    top: 21px;
+    left: 242px;
+  }
+
+  100% {
+    top: 58px;
+    left: 360px;
+  }
+}
+
+
 /* 6 фигур за персонами */
+
 .circle_down {
   bottom: -126px;
   width: 840px;
@@ -376,6 +483,7 @@
 /***
 Бегущий текст на бэкграунде
 ***/
+
 .run-text__wrap {
   transform: rotate(-45deg);
   line-height: 130px;

@@ -34,6 +34,36 @@ window.addEventListener('load', () => {
         bias_transform: 350
     }
     new RunText(obj_dark);
+
+    /*** Фигуры на масках */
+    let mask_person1 = document.querySelector('.mask_person1');
+    let mask_person2 = document.querySelector('.mask_person2');
+    let mask_person3 = document.querySelector('.mask_person3');
+
+    let arr_img_figure = [
+        'triangle_white',
+        'circle_white',
+        'rectangle_white',
+    ];
+
+    let arr_dom_element = [
+        mask_person1,
+        mask_person2,
+        mask_person3
+    ];
+
+    let j = 0
+    setInterval(() => {
+        arr_dom_element.forEach(item => {
+            j = getRandomInt(3)
+            item.style.background = `url(img/dest/${arr_img_figure[j]}.webp) center center no-repeat no-repeat`;
+            item.style.backgroundSize = `contain`;
+        })
+    },2000);
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
 });
 
 /** Верхнее видео **/
