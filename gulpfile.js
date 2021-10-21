@@ -30,6 +30,7 @@ function browsersync() {
 
 function scripts() {
     return src([
+        'app/js/RunText.js',
         'app/js/app.js',
     ])
         .pipe(sourcemaps.init())
