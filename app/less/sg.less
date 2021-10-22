@@ -250,6 +250,7 @@
     transform: rotate(217deg);
   }
 }
+
 .top_door {
   width: 100%;
   height: 100%;
@@ -306,6 +307,13 @@
   max-width: 810px;
   position: relative;
 
+  @media screen and (max-width: 900px) {
+    width: 320px;
+    height: 300px;
+    max-width: 320px;
+    text-align: center;
+  }
+
   .figure_down {
     position: absolute;
     z-index: 50;
@@ -322,6 +330,13 @@
     max-width: 350px;
     z-index: 42;
     animation: linear up_down_black_man 3s infinite;
+    @media screen and (max-width: 900px) {
+      top: 100px;
+      max-width: 200px;
+      animation: none;
+      background: linear-gradient(to top, rgb(173, 1, 151) 0%,rgba(0,0,0,0) 100%);
+      box-shadow: 0 20px 0 -10px rgb(173, 1, 151), 0 40px 0 -20px rgb(227, 0, 198), 0 80px 0 -50px rgb(232, 0, 202);
+    }
   }
 
   .three_persons {
@@ -331,6 +346,14 @@
     z-index: 41;
     animation: linear up_down_three_persons 3s infinite;
     animation-delay: .5s;
+
+    @media screen and (max-width: 900px) {
+      top: 65px;
+      max-width: 260px;
+      animation: none;
+      background: linear-gradient(to top, rgb(123, 0, 108) 0%,rgba(0,0,0,0) 100%);
+      //box-shadow: 0 40px 0 -20px rgb(173, 1, 151), 0 80px 0 -40px rgb(227, 0, 198), 0 120px 0 -60px rgb(232, 0, 202);
+    }
   }
 
   .figure_up {
@@ -380,6 +403,13 @@
     background-size: contain;
     opacity: .75;
     animation: ease-in-out mask_person1A 9s infinite;
+    @media screen and (max-width: 900px) {
+      animation: none;
+      width: 20px;
+      height: 20px;
+      top: 31px;
+      left: 66px;
+    }
   }
 
   .mask_person2 {
@@ -392,6 +422,13 @@
     background-size: contain;
     opacity: .75;
     animation: ease-in-out mask_person2A 9s infinite;
+    @media screen and (max-width: 900px) {
+      animation: none;
+      width: 20px;
+      height: 20px;
+      top: 8px;
+      left: 117px;
+    }
   }
 
   .mask_person3 {
@@ -404,6 +441,13 @@
     background-size: contain;
     opacity: .75;
     animation: ease-in-out mask_person3A 9s infinite;
+    @media screen and (max-width: 900px) {
+      animation: none;
+      width: 20px;
+      height: 20px;
+      top: 30px;
+      left: 177px;
+    }
   }
 }
 
@@ -481,6 +525,9 @@
   width: 840px;
   left: -14px;
   opacity: 0;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .circle_up {
@@ -488,6 +535,9 @@
   left: -14px;
   width: 840px;
   opacity: 0;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .triangle_up {
@@ -495,6 +545,9 @@
   width: 810px;
   transform: perspective(1200px) rotateX(39deg) translateZ(-89px);
   opacity: 0;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .triangle_down {
@@ -503,6 +556,9 @@
   left: -155px;
   transform: perspective(1200px) rotateX(35deg) translateZ(-89px);
   opacity: 0;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .rectangle_down {
@@ -512,7 +568,9 @@
   bottom: -90px;
   left: -45px;
   transform: perspective(1200px) rotateX(50deg) translateZ(0);
-  //display: none;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 .rectangle_up {
@@ -522,7 +580,9 @@
   bottom: 154px;
   left: 76px;
   transform: perspective(1200px) rotateX(58deg) translateZ(0);
-  //display: none;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
 
 /***
