@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
             item.style.background = `url(./img/dest/${arr_img_figure[j]}.webp) center center no-repeat no-repeat`;
             item.style.backgroundSize = `contain`;
         })
-    },3000);
+    }, 3000);
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -76,13 +76,29 @@ window.addEventListener('load', () => {
         bottom_door.style.transform = 'translateY(0)';
     }, 26250);
     setInterval(() => window.location.reload(), 29000);
+
+    /** Рандомный запуск аудио **/
+    let audio_bg1 = document.getElementById('audio_bg1')
+    let audio_bg2 = document.getElementById('audio_bg2')
+    /*audio_bg2.addEventListener('canplay', () => {
+
+        getRandomInt(2) ? audio_bg1.play() : audio_bg2.play();
+    });*/
+
+    let greetings = document.createElement("audio");
+    greetings.src = `./audio/music${getRandomInt(2) + 1}.mp3`;
+    greetings.setAttribute('autoplay', 'true');
+    greetings.setAttribute('volume', '0.4');
+    greetings.setAttribute('type', 'audio/mpeg');
+    greetings.autoplay = true;
+    document.body.appendChild(greetings);
 });
 
 /** Верхнее видео **/
 
-let header__video =  document.getElementById('header__video')
-header__video.addEventListener('canplay', () => {
-    setTimeout(() =>header__video.play(), 22500);
+let header__video = document.getElementById('header__video')
+header__video.addEventListener('canplaythrough', () => {
+    setTimeout(() => header__video.play(), 22500);
 });
 
 /* ВСё заканчивается через 28 сек */
